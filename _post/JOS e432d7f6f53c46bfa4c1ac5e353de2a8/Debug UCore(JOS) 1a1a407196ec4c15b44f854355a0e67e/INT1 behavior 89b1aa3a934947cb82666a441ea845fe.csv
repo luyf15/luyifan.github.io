@@ -1,0 +1,16 @@
+﻿Debug or Breakpoint Condition,Exception Class,DR6 Flags Tested,DR7 Flags Tested
+Single-step trap,Trap,BS = 1,
+"Instruction breakpoint, at addresses defined by DRn and
+LENn",Fault,"Bn = 1 and
+(Gn or Ln = 1)",R/Wn = 0
+"Data write breakpoint, at addresses defined by DRn and LENn",Trap,"Bn = 1 and
+(Gn or Ln = 1)",R/Wn = 1
+"I/O read or write breakpoint, at addresses defined by DRn
+and LENn",Trap,"Bn = 1 and
+(Gn or Ln = 1)",R/Wn = 2
+"Data read or write (but not instruction fetches), at addresses defined by DRn and LENn",Trap,"Bn = 1 and
+(Gn or Ln = 1)",R/Wn = 3
+"General detect fault, resulting from an attempt to modify debug registers (usually in conjunction with in-circuit
+emulation)",Fault,BD = 1,
+Task switch,Trap,BT = 1,
+INT1 instruction,Trap,,

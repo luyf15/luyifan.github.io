@@ -1,0 +1,17 @@
+﻿Name,Types,Symbol Descriptor,Type Descriptor,Description,Directive
+Array types,N_GSYM/N_LSYM,T,ar,".stabs ""name:(sym_desc if G) type_def(19)=type_desc(ar) 
+index_type_ref(int); NIL; high_bound(num); element_type_ref(n)"";N_G/LSYM, NIL, NIL, NIL",.stabs
+Enumerations,N_LSYM,T,e,".stab ""name:sym_dec(type)type_def(22)=sym_desc(enum)
+enum_name:value(0),enum_name:value(3),enum_name:value(4),;"",
+N_LSYM, NIL, NIL, NIL",.stabs
+Sturcture tags,N_LSYM,T,s,".stabs ""name:sym_desc(struct tag) Type_def(16)=type_desc(struct type)
+struct_bytes
+elem_name:type_ref(int),bit_offset,field_bits;
+elem_name:type_ref(float),bit_offset,field_bits;
+elem_name:type_def(17)=type_desc(dynamic array) index_type(int);NIL;
+high_bound(7);element_type(char),bit_offset,field_bits;;"",
+N_LSYM,NIL,NIL,NIL",.stabs
+Typedefs,N_LSYM,T,t,...,.stabs
+Unions,N_LSYM,T,u,...,.stabs
+Function types,N_GSYM,F/G(local/global),f,".stabs ""name:sym_desc(global)type_def(24)=ptr_to(25)=
+type_def(func)type_ref(int)",.stabs

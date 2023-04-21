@@ -1,0 +1,13 @@
+﻿Type,Name,Number,Directive,Description
+N_SO,path and name of the source file,100,.stabs,".stabs ""path_name"", N_SO, NIL, NIL, Code_address_of_program_start
+.stabs ""file_name:"", N_SO, NIL, NIL, Code_address_of_program_start"
+N_SLINE,Line Numbers,68,.stabn,"symbol: 
+.stabn N_SLINE, NIL, source line, address(label for the start of source line)"
+N_FUN,"Procedures
+(f: local/F: global)",36,.stabs,".stabs ""name: desc (global proc `F') return_type_ref (int)"",
+N_FUN, NIL, NIL, address
+exp:  .stabs ""main:F1"",36,0,0,_main"
+N_L(R)BRAC,"block structure
+(left/right brace大括号)",192（LB）/224（RB）,.stabn,"(The label that describe the start/end block  just follows the N_FUNC stab describing the procedure ifself)
+.stabn N_LBRAC, NIL, NIL, left-brace-address(label)
+.stabn N_RBRAC, NIL, NIL, right-brace-address(label)"
