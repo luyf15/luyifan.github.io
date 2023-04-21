@@ -4,12 +4,13 @@ description: "This is a preview of jekyll-shell-theme."
 github_username: obsidian0215
 email: obsidian0215@gmail.com
 baseurl: ""
-url: "https://luyifan"
+url: "https://luyifan.top"
 
-theme: jekyll-shell-theme
+remote_theme: "tareqdandachi/jekyll-shell-theme"
 
 plugins:
   - jemoji
+  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-seo-tag
 
