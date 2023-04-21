@@ -4,12 +4,14 @@ permalink: /
 permalink_name: /home
 title: Obsidian's Blog
 
-detail_image: assets/logo1.svg
+detail_image: assets/logo_black.svg
 
 ---
 
 # Obsidian's Blog
 
-**Obsidian's Blog** 
-[/read-me](read-me) 
-[/preview](preview).
+一个摸鱼博士生的小记录
+
+[README](read-me) 
+
+[EXAMPLE](preview)
