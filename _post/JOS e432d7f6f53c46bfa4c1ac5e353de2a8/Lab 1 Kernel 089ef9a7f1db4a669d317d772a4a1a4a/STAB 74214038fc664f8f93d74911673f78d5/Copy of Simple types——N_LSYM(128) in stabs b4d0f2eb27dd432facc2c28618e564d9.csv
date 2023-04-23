@@ -1,7 +1,0 @@
-﻿Name,Symbol Descriptor,Description
-basic type,t,Boilerplate——the debugger knows how to read bit as the type anyway.
-range type defined by min and max,r,".stabs ""name:descriptor (type) type-def=
-type-desc type-ref; low-bound; high-bound;"", N_LSYM, NIL, NIL, NIL"
-range type defined by number of bits,r,".stabs ""name: desc(type) type-def=
-type-desc type-ref; bit-count; 0;"",
-N_LSYM, NIL, NIL, NIL"
