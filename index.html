@@ -49,7 +49,11 @@ comments: false
     <div class="columns">
         <div class="column two-thirds" >
             <ol class="repo-list">
-              <img style="width: 666.66; height: auto;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+              
+              <li class="repo-list-item">
+                <img style="object-fit: scale-down;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+              </li>
+              
               {% for post in site.posts %}
               {% if paginator.page == 1 %}
               {% if post.topmost == true %}
