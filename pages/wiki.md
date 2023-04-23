@@ -9,12 +9,6 @@ menu: 维基
 permalink: /wiki/
 ---
 
-
-.aligncenter {
-    clear: both;
-    display: block;
-    margin: auto;
-}
 <img style="object-fit: contain;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
 
 > 记多少命令和快捷键会让脑袋爆炸呢？

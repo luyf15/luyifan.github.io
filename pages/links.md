@@ -10,7 +10,7 @@ permalink: /links/
 
 <img style="object-fit: contain;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
 
-> God made relatives. Thank God we can choose our friends.
+> 友情链接
 
 <ul>
 {% for link in site.data.links %}
@@ -19,8 +19,6 @@ permalink: /links/
   {% endif %}
 {% endfor %}
 </ul>
-
-> 友情链接
 
 <ul>
 {% for link in site.data.links %}

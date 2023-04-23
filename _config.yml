@@ -7,7 +7,7 @@ baseurl:  # the subpath of your site, e.g. /blog
 url: "https://luyifan.top" # the base hostname & protocol for your site, e.g. http://example.com
 #logo: "/assets/images/branding/logo_text.png"
 date_format: "ordinal"
-subtitle: '一个懒狗博士生的杂物间'
+subtitle: '泥の河に浸かった人生も悪くはない\n一度きりで 终わるなら'
 keywords: 
 timezone: Asia/Shanghai
 
