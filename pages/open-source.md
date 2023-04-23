@@ -6,7 +6,7 @@ description: 开源改变世界。
 permalink: /open-source/
 ---
 
-<img style="height:600px;width:1920px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+<img style="height:188px;width:600px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
 
 {% if site.github.public_repositories != false %}
 {% assign sorted_repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
