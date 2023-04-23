@@ -382,7 +382,7 @@ env_run(struct Env *e)
 
 **So far, `i386_init` can execute *user_hello* in user environment, invoking a *triple fault* caused by the incomplete trap(syscall) handler(later implemented in `trap_init`): After `*int $0x30*` in `sys_cputs`(in *hello*) executed, $eip will jump to an invalid address 0xe05b.**
 
-![Untitled](./images/posts/Lab3-Processes/Untitled.png)
+![Untitled](/images/posts/Lab3-Processes/Untitled.png)
 
 ### Handling Interrupts and Exceptions
 
@@ -570,7 +570,7 @@ trap_init(void)
 
 **Result: When the user program is user_divzero, user_badsegment, which can make kernel invoke an exception, we can get the following output.**
 
-![Untitled](./images/posts/Lab3-Processes/Untitled%201.png)
+![Untitled](/images/posts/Lab3-Processes/Untitled%201.png)
 
 **In the output snapshot, we can know that the user_divzero triggered a divide-zero exception. The exception handler eventually destroyed the user environment.**
 
@@ -601,7 +601,7 @@ The page fault exception, interrupt vector 14 (T_PGFLT): When the processor take
     
     **Result: 4 user programs above can all be trapped into kernel, with correct fault reasons.**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%202.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%202.png)
     
 
 ### The Breakpoint Exception
@@ -624,7 +624,7 @@ The breakpoint exception, interrupt vector 3 (T_BRKPT), is normally used to allo
     
     **Result: The breakpoint test passed.**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%203.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%203.png)
     
 - *Challenge!* Modify the JOS kernel monitor so that you can 'continue' execution from the current location (e.g., after the int3, if the kernel monitor was invoked via the breakpoint exception), and so that you can single-step one instruction at a time. You will need to understand certain bits of the EFLAGS register in order to implement single-stepping.
     
@@ -667,11 +667,11 @@ The breakpoint exception, interrupt vector 3 (T_BRKPT), is normally used to allo
     
     - **If the kmonitor executes step/s: bit 8 of EFLAGS (TF) is set, the next instruction is `ret` which will cause the processor back to kernel.**
         
-        ![Untitled](./images/posts/Lab3-Processes/Untitled%204.png)
+        ![Untitled](/images/posts/Lab3-Processes/Untitled%204.png)
         
     - **If the kmonitor executes continue/c: bit 8 of EFLAGS (TF) is clear. The kmonitor exits and the control flow will be back to kernel until the user process destroyed.**
         
-        ![Untitled](./images/posts/Lab3-Processes/Untitled%205.png)
+        ![Untitled](/images/posts/Lab3-Processes/Untitled%205.png)
         
     
     *****When testing the `backtrace` command containing user stack, the kernel will catch a `page-fault` exception with `ebp=0xdebfdff0`(within `*the user stack:top=0xdebfe000*`). This issue is caused by the implementation of arguments displaying in mon_backtrace function:** 
@@ -780,13 +780,13 @@ Test case: Run the `*user/hello*` program under your kernel (make run-hello), wh
     
 - **run `*user/hello*`: the “hello, world” string has been printed on the console.**
         
-![Untitled](./images/posts/Lab3-Processes/Untitled%206.png)
+![Untitled](/images/posts/Lab3-Processes/Untitled%206.png)
         
 - **run `*user/testbss*`:**
         
     **I got a great series of page-fault exception, and then the kernel was stucked. When I debugged the user-environment initialization, I found that when the kernel tried to allocate memories of the .data segment, the kernel would get page-faults at va 0x00000048 ?? Deeping into the gva2gpa mapping got unmapped pa ≥0xa0000(`IOPHYSMEM`). I speculated there are some mistakes in the initial memmap and I figured out that the reserved kernel memory got a wrong range which would make the envs array accidentally modified by users. After correcting the `init_memmap`, `*user/testbss*` can print its messages normally.**
         
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%207.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%207.png)
         
 - ***Challenge!*** Implement system calls using `sysenter` and `sysexit` instructions (faster) instead of using `int 0x30` and `iret`. 
 	When executing a `sysenter` instruction, the processor does not save state information for the user code (e.g., e/rip), and neither `sysenter` nor `sysexit` supports passing parameters on the stack, instead by registers——
@@ -972,7 +972,7 @@ A user program starts running at the top of `*lib/entry.S*`. After some setup, 
     
     **Result: user_hello now can print its PID.**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%208.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%208.png)
     
 
 ### Page faults and memory protection
@@ -1084,21 +1084,21 @@ Results:
     
 1. **Run `*user/breakpoint*`, then run `backtrace`: (The analysis is in former Exercise 7.)**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%209.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%209.png)
     
 2. **Run `*user/buggyhello(2)*`: They both caused a user_mem_failure as expected.**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%2010.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%2010.png)
     
     **(Try to read one btye from an unmapped memory(0x01))**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%2011.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%2011.png)
     
     **(Try to write to a const value in .data segment(0x803000))**
     
 3. **Run `*user/evilhello*`: The attempt to abuse kernel memory is banned.**
     
-    ![Untitled](./images/posts/Lab3-Processes/Untitled%2012.png)
+    ![Untitled](/images/posts/Lab3-Processes/Untitled%2012.png)
     
     **(Try to print the kernel entry point as a string)**
     

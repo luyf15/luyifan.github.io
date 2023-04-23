@@ -210,11 +210,11 @@ Score: 70/70
     
     **In QEMU monitor, we can see that there are same contents in the virtual addresses and corresponding physical addresses (*pva2pga* shows the same address mapping)**
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled.png)
     
     **In GDB, the result is same as QEMU monitor(vaddr)**
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%201.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%201.png)
     
     Question: 
     
@@ -382,7 +382,7 @@ Score: 70/70
     
     **Result: all mem-check pass.**
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%202.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%202.png)
     
 
 ## Part 3: Kernel Address Space
@@ -436,7 +436,7 @@ JOS divides the processor's 32-bit linear address space into two parts. User env
     
     **Result:** 
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%203.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%203.png)
     
     Question: 
     
@@ -488,7 +488,7 @@ JOS divides the processor's 32-bit linear address space into two parts. User env
 
 1. PSE(4MB page) support: We consumed many physical pages to hold the page tables for the KERNBASE mapping. Do a more space-efficient job using the PTE_PS ("Page Size") bit in the page directory entries. This bit is supported on more recent x86 processors except old 80386. You will therefore have to refer to [Volume 3 of the current Intel manuals](https://pdos.csail.mit.edu/6.828/2018/readings/ia32/IA32-3A.pdf). Make sure you design the kernel to use this optimization only on processors that support it!
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%204.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%204.png)
     
     **Intel suggests that the processor maintains 4M-Byte page entries and 4K-Byte page entries in separate TLBs. So, placing often used code such as the kernel in a large page, frees up 4K-Byte-page TLB entries for application programs and tasks. (to reduce TLB misses and thus improve overall system performance)**
     
@@ -583,11 +583,11 @@ JOS divides the processor's 32-bit linear address space into two parts. User env
     
     **Result:** 
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%205.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%205.png)
     
     **Each PDE associated with kernel mem space now directly points to the corresponding physical memory. The lowest 12 bits of each PDE are equal to PSE | W | P . The kernel with modified memory management and PSE-pages can pass all the memory checks now.**
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%206.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%206.png)
     
 2. Kernel monitor extension: Extend the JOS kernel monitor with commands to:
 - Display in a useful and easy-to-read format all of the physical page mappings (or lack thereof) that apply to a particular range of virtual/linear addresses in the currently active address space. For example, you might enter '*showmap 0x3000 0x5000*' to display the page mappings and corresponding permission bits that apply to the pages at va 0x3000, 0x4000, and 0x5000.
@@ -738,7 +738,7 @@ JOS divides the processor's 32-bit linear address space into two parts. User env
         
         Result:
         
-        ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%207.png)
+        ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%207.png)
         
     - **mon_setperm**:
         
@@ -800,7 +800,7 @@ JOS divides the processor's 32-bit linear address space into two parts. User env
         
         Result:
         
-        ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%208.png)
+        ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%208.png)
         
     - **mon_dumpmem**:
         
@@ -900,13 +900,13 @@ JOS divides the processor's 32-bit linear address space into two parts. User env
         
         Result:
         
-        ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%209.png)
+        ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%209.png)
         
 1. **Place Kernel in a seperate pgtable*: Each user-level environment maps the kernel. Change JOS so that the kernel has its own page table and so that a user-level environment runs with a minimal number of kernel pages mapped (each user-level environment maps just enough pages mapped so that the user-level environment can enter and leave the kernel correctly) . You also have to come up with a plan for the kernel to read/write arguments to system calls.
     
     **Design: (refer to Linux KPTI) The user-space space only contains a minimal set of kernel-space handling system calls and interrupts. The handlers eventually call task swtich (cr3 swtich) instruction to execute in kernel space, which mapped in a separate page tables.** 
     
-    ![Untitled](./images/posts/Lab2-Memory-Management/Untitled%2010.png)
+    ![Untitled](/images/posts/Lab2-Memory-Management/Untitled%2010.png)
     
     **Disadvantage (Performance overhead) : Before each interrupt, syscall and exception’s entry and exit should change cr3 to kernel pgtable, which will take several hundred clock cycles. More TLB flush during syscalls results from CR3 switch.**
     

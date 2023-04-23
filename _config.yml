@@ -3,14 +3,14 @@
 # ---------------- #
 title: Obsidian's Blog
 description: '一个懒狗博士生的杂物间' # this means to ignore newlines until "baseurl:"
-permalink: ':title:output_ext'
 baseurl:  # the subpath of your site, e.g. /blog
 url: "http://luyifan.top" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/images/branding/logo_text.png"
+#logo: "/assets/images/branding/logo_text.png"
 date_format: "ordinal"
 subtitle: '一个懒狗博士生的杂物间'
 keywords: 
 timezone: Asia/Shanghai
+
 encoding: "utf-8"
 # 页面左下角显示的年份
 since: 2023

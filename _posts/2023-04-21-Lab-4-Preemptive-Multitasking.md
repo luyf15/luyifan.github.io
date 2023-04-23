@@ -239,7 +239,7 @@ In addition to this, any extra per-CPU state or additional CPU-specific initiali
     
     **Result: Test functions `check_mm_manager()` and `check_kern_pgdir()` passed**
     
-    ![Untitled](./images/posts/Lab4-Preemptive-Multitasking/Untitled.png)
+    ![Untitled](/images/posts/Lab4-Preemptive-Multitasking/Untitled.png)
     
 - **Ex4:** The code in `trap_init_percpu()` (in `*kern/trap.c*`) initializes the TSS and TSS descriptor for the BSP,which is incorrect when running on APs. Change the code so that it can work on all CPUs. (**Note: New code should not use the global `ts` variable anymore.**)
     
@@ -276,7 +276,7 @@ In addition to this, any extra per-CPU state or additional CPU-specific initiali
     
     **Result: run make qemu CPUS=8 and the output is as follows.**
     
-    ![Untitled](./images/posts/Lab4-Preemptive-Multitasking/Untitled%201.png)
+    ![Untitled](/images/posts/Lab4-Preemptive-Multitasking/Untitled%201.png)
     
 
 ### Locking
@@ -556,7 +556,7 @@ Your next task in this lab is to change the JOS kernel so that it can alternate 
     
     **Result: Run `user_yield`, and `sys_yield` works well.**
     
-    ![Untitled](./images/posts/Lab4-Preemptive-Multitasking/Untitled%202.png)
+    ![Untitled](/images/posts/Lab4-Preemptive-Multitasking/Untitled%202.png)
     
 
 **Question**
@@ -1528,7 +1528,7 @@ You will have to ensure that the `FL_IF` flag is set in user environments when
     
     **Result: with `sti` in `sched_halt()`, running `*user/spin*` will output the hardware interrupt’s trapframe.**
     
-    ![Untitled](./images/posts/Lab4-Preemptive-Multitasking/Untitled%203.png)
+    ![Untitled](/images/posts/Lab4-Preemptive-Multitasking/Untitled%203.png)
     
 
 ### Handling Clock Interrupts
@@ -1555,7 +1555,7 @@ In the `*user/spin*` program, after the child environment was first run, it ju
     
     **Result: Now in `*user/spin`,* the parent environment should `fork` off the child, `sys_yield()` to it a couple times but in each case regain control of the CPU after one time slice, and finally kill the child environment and terminate gracefully.**
     
-    ![Untitled](./images/posts/Lab4-Preemptive-Multitasking/Untitled%204.png)
+    ![Untitled](/images/posts/Lab4-Preemptive-Multitasking/Untitled%204.png)
     
     **Now, `make CPUS=2 grade` will succeed in the part of `stresssched`.**
     
