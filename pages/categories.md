@@ -1,12 +1,14 @@
 ---
 layout: categories
 title: Categories
-description: 哈哈，你找到了我的文章基因库
+description: 文档分类
 keywords: 分类
 comments: false
 menu: 分类
 permalink: /categories/
 ---
+
+<img style="height:600px;width:1920px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
 
 <section class="container posts-content">
 {% assign sorted_categories = site.categories | sort %}

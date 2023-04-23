@@ -9,6 +9,8 @@ menu: 维基
 permalink: /wiki/
 ---
 
+<img style="height:600px;width:1920px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+
 > 记多少命令和快捷键会让脑袋爆炸呢？
 
 {% case site.components.wiki.view %}

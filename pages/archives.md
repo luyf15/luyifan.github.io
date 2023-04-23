@@ -8,6 +8,8 @@ menu: 归档
 permalink: /archives/
 ---
 
+<img style="height:600px;width:1920px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+
 <section class="container posts-content">
 {% assign count = 1 %}
 {% for post in site.posts reversed %}
