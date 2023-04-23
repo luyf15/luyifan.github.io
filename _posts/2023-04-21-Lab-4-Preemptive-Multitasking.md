@@ -2,15 +2,13 @@
 layout: post
 read_time: true
 show_date: true
+categories: JOS
 title:  JOS Lab 4 - Preemptive Multitasking
 date:   2023-04-21 22:48:20 +0800
 description: JOS Lab 4 - Preemptive Multitasking
-img: posts/20210125/Perceptron.jpg
 tags: [coding, jos, operation system, C]
 author: Obsidian0215
 github: obsidian0215/jos
-mathjax: yes # leave empty or erase to prevent the mathjax javascript from loading
-toc: yes # leave empty or erase for no TOC
 ---
 
 # Lab 4: Preemptive Multitasking

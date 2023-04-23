@@ -2,15 +2,13 @@
 layout: post
 read_time: true
 show_date: true
+categories: JOS
 title:  JOS Lab 3 - Processes (User Environments)
 date:   1997-01-09 22:48:20 +0800
 description: JOS Lab 3 - Processes (User Environments)
-img: posts/20210125/Perceptron.jpg
 tags: [coding, jos, operation system, C]
 author: Obsidian0215
 github: obsidian0215/jos
-mathjax: yes # leave empty or erase to prevent the mathjax javascript from loading
-toc: yes # leave empty or erase for no TOC
 ---
 
 # Lab 3: Processes (User Environments)
