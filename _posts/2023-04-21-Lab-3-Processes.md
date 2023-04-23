@@ -2,11 +2,11 @@
 layout: post
 read_time: true
 show_date: true
-Categories: JOS
+categories: JOS
 title:  JOS Lab 3 - Processes (User Environments)
 date:   2023-04-21 22:48:20 +0800
 description: JOS Lab 3 - Processes (User Environments)
-tags: [coding, jos, operation system, C]
+keywords: JOS, Operation System, C, Kernel
 author: Obsidian0215
 github: obsidian0215/jos
 ---
