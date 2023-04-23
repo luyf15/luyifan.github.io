@@ -1,18 +1,14 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 摸了
+keywords: Obsidian
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
-
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+老二刺螈，废物音游玩家，喜欢折腾电子设备，好动。涉足领域：内核安全、虚拟化安全、嵌入式、网络安全、(少量)机器学习与人工智能
 
 ## 联系
 

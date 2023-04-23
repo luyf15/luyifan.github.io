@@ -1,19 +1,16 @@
-- name: Software Engineer Keywords
+- name: 程序语言
   keywords:
-      - Java
-      - C++
+      - Assembly
+      - C/C++
       - Python
-      - Design Patterns
+      - Rust
 
-- name: Mobile Developer Keywords
+- name: 系统安全
   keywords:
-      - Android
-      - Reverse Engineering
+      - 内核安全
+      - 虚拟化安全
+      - 嵌入式
 
-- name: Windows Developer Keywords
+- name: AI
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - 机器学习

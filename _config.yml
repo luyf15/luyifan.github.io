@@ -4,13 +4,9 @@
 title: Obsidian's Blog
 description: '一个懒狗博士生的杂物间' # this means to ignore newlines until "baseurl:"
 permalink: ':title:output_ext'
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 url: "http://luyifan.top" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/img/branding/logo_text.png"
-logo-icon: "/assets/img/branding/logo_icon.svg"
-logo-icon-SEO: "/assets/img/branding/logo_icon.png" # must be a non SVG file
-baseurl:
-url: https://mazhuang.org
+logo: "/assets/images/branding/logo_text.png"
 date_format: "ordinal"
 subtitle: '一个懒狗博士生的杂物间'
 keywords: 
@@ -19,7 +15,7 @@ encoding: "utf-8"
 # 页面左下角显示的年份
 since: 2023
 # 源码仓库，请替换成自己的
-repository: mzlogin/mzlogin.github.io
+repository: obsidian0215/obsidian0215.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
@@ -63,12 +59,12 @@ highlight_theme: github
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Obsidian
 organization: 
 organization_url: 
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+github_username: Obsidian0215
+location: Beijing, China
+email: obsidian0215@gmail.com
 
 # ---------------- #
 #    Navigation    #
@@ -167,10 +163,11 @@ beaudar:
     repo: mzlogin/blog-comments
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
-    repo: mzlogin/blog-comments
-    repo-id: MDEwOlJlcG9zaXRvcnk5MzEyNzkxNw==
+    repo: obsidian0215/blog-comment
+    repo-id: R_kgDOJaSKbA
     category: Announcements
-    category-id: DIC_kwDOBY0E7c4CRtg9
+    category-id: DIC_kwDOJaSKbM4CV-2c
+    data-input-position: top
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
