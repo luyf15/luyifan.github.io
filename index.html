@@ -42,12 +42,13 @@ comments: false
         </div>
       </div>
     </div>
-    <img class="aligncenter" style="object-fit: contain;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+    
 </section>
 <!-- /.banner -->
 <section class="container content">
     <div class="columns">
         <div class="column two-thirds" >
+            <img style="object-fit: contain;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
             <ol class="repo-list">
               {% for post in site.posts %}
               {% if paginator.page == 1 %}
