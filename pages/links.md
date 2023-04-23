@@ -8,7 +8,7 @@ menu: 链接
 permalink: /links/
 ---
 
-<img style="height:600px;width:1920px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
+<img style="object-fit: contain;" src="{{ site.url }}/assets/images/branding/logo_text.png" alt="Obsidian's Blog" />
 
 > God made relatives. Thank God we can choose our friends.
 
