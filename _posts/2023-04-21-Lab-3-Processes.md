@@ -386,7 +386,7 @@ env_run(struct Env *e)
 
 ### Handling Interrupts and Exceptions
 
-The first `*int $0x30*`syscall instruction in user space is a dead end so far: once the processor gets into user mode, there is no way to get back out. You will now need to implement basic exception and system call handling, so that it is possible for the kernel to recover control of the processor from user-mode code. (The x86 interrupt and exception mechanism is [here](Debug-JOS.html).)
+The first `*int $0x30*`syscall instruction in user space is a dead end so far: once the processor gets into user mode, there is no way to get back out. You will now need to implement basic exception and system call handling, so that it is possible for the kernel to recover control of the processor from user-mode code. (The x86 interrupt and exception mechanism is [here](https://luyifan.top/2023/04/21/Debug-JOS).)
 
 ### Protected Control Transfer
 
