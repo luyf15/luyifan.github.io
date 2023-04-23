@@ -4,7 +4,7 @@
 title: Obsidian's Blog
 description: '一个懒狗博士生的杂物间' # this means to ignore newlines until "baseurl:"
 baseurl:  # the subpath of your site, e.g. /blog
-url: "http://luyifan.top" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://luyifan.top" # the base hostname & protocol for your site, e.g. http://example.com
 #logo: "/assets/images/branding/logo_text.png"
 date_format: "ordinal"
 subtitle: '一个懒狗博士生的杂物间'
