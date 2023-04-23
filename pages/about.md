@@ -8,6 +8,8 @@ menu: 关于
 permalink: /about/
 ---
 
+<img style="height:1920px;width:600px;border:1px solid lightgrey;" src="{{ site.url }}/assets/images/branding/logo_full_light.png" alt="Obsidian's Blog" />
+
 老二刺螈，废物音游玩家，喜欢折腾电子设备，好动。涉足领域：内核安全、虚拟化安全、嵌入式、网络安全、(少量)机器学习与人工智能
 
 ## 联系
